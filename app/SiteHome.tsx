@@ -1,34 +1,51 @@
 const agendaItems = [
   {
     number: "01",
-    title: "Communicate on a dependable cadence",
-    text: "Weekly updates on major capital projects and a concise monthly shareholder summary of non-confidential priorities, decisions, timelines, and next steps.",
+    title: "Clear, dependable communication",
+    text: "Weekly major-project updates, a concise monthly Board digest, plain-language reasons for significant decisions, and prompt notice when a target slips.",
   },
   {
     number: "02",
-    title: "Put an owner behind every major project",
-    text: "A named board liaison or project lead, with scope, milestones, budget versus actual, schedule changes, risks, and accountability clearly reported.",
+    title: "Financial discipline and foresight",
+    text: "A multi-year reserve and capital roadmap, budget-versus-actual reporting, and careful review of borrowing, assessments, major contracts, and long-term risk.",
   },
   {
     number: "03",
-    title: "Plan beyond next year's budget",
-    text: "A multi-year capital plan and reserve roadmap that explains the effect of major work, assessments, borrowing, and significant asset decisions.",
+    title: "Finish the facade. Control every project.",
+    text: "Named project ownership, milestones, scope, budget, contractor accountability, risks, and schedule reporting - beginning with facade work and scaffolding removal.",
   },
   {
     number: "04",
-    title: "Set clear service standards",
-    text: "Published response targets for the managing agent, including a two-business-day acknowledgment for routine inquiries and a clear escalation path.",
+    title: "Responsive, accountable management",
+    text: "A two-business-day acknowledgment standard for routine inquiries, a visible escalation path, service tracking, and regular managing-agent performance review.",
   },
   {
     number: "05",
-    title: "Open the doors to participation",
-    text: "Quarterly shareholder forums with in-person and Zoom access, regular surveys, useful committees, and an understandable, open candidate process.",
+    title: "Protect property value",
+    text: "Prioritize preventive maintenance, disciplined operations, curb appeal, and investments that keep 505 financially strong and competitive for current and future shareholders.",
   },
   {
     number: "06",
-    title: "Decide with facts and shareholder input",
-    text: "Evaluate rules, amenities, and shared-space proposals through cost, safety, operations, property value, and building-wide input - without predetermined outcomes.",
+    title: "Fair rules and fact-based amenities",
+    text: "Review renovation and sublet rules for consistency. Evaluate a gym, playroom, outdoor space, and other ideas through cost, safety, operations, and shareholder input.",
   },
+  {
+    number: "07",
+    title: "Open governance and fair elections",
+    text: "Quarterly forums, Zoom access, regular surveys, useful committees, equal candidate access, independent election procedures, and discussion of staggered terms and reasonable term limits.",
+  },
+  {
+    number: "08",
+    title: "A better everyday shareholder experience",
+    text: "Consistent service, respectful treatment, proactive building updates, and decisions that balance long-time residents, growing families, flexibility, safety, and community.",
+  },
+];
+
+const firstHundredDays = [
+  "Publish the communication and response calendar",
+  "Issue a facade and major-project status baseline",
+  "Begin the reserve, capital, and vendor review",
+  "Schedule the first hybrid shareholder forum",
 ];
 
 const candidates = [
@@ -66,7 +83,7 @@ const candidates = [
     name: "Jon Margareten",
     type: "New voice",
     role: "Finance, law, construction, governance",
-    bio: "A CPA, MBA, practicing attorney, business operator, and construction-business owner whose work spans financial strategy, compliance, project management, contractor oversight, and cost control.",
+    bio: "A licensed CPA, MBA, practicing attorney, business operator, and construction-business owner with experience in financial statements, budgeting, contracts, risk, contractor oversight, renovations, and cost control. Jon has committed 15 to 20 hours per week to Board service.",
   },
   {
     name: "Alison Schlesinger",
@@ -90,10 +107,16 @@ const candidates = [
 
 const documents = [
   {
-    title: "One-page shareholder agenda",
-    meta: "1 page / print-ready",
+    title: "Full one-page shareholder platform",
+    meta: "8 priorities / print-ready",
     href: "./downloads/505-shareholders-one-page-agenda.pdf",
-    text: "The six commitments in one concise handout.",
+    text: "The expanded survey-driven agenda, first 100 days, and coordinated-vote message.",
+  },
+  {
+    title: "Shareholder-supported slate proxy",
+    meta: "1 page / campaign proxy",
+    href: "./downloads/505-shareholder-slate-proxy.pdf",
+    text: "Appoints the slate proxy holder for the 2026 Annual Meeting and any adjournments. Read the date note before signing.",
   },
   {
     title: "Shareholder survey results",
@@ -126,6 +149,7 @@ function NavigationLinks() {
     <>
       <a href="#why">Why change</a>
       <a href="#agenda">Our agenda</a>
+      <a href="#proxy">Get a proxy</a>
       <a href="#slate">The slate</a>
       <a href="#materials">Materials</a>
       <a href="#election">How to vote</a>
@@ -157,13 +181,13 @@ export function SiteHome() {
             <p className="eyebrow">Independent shareholder information</p>
             <h1>A clear plan for a stronger 505.</h1>
             <p className="hero-deck">
-              Understand the shareholder-supported board slate, the priorities
-              behind it, and what to do before the September 23 election at
-              East River House.
+              A survey-driven platform for stronger finances, better project
+              control, responsive management, open governance, and a building
+              that protects quality of life and long-term value.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#agenda">Read the agenda</a>
-              <a className="button button-secondary" href="#slate">Meet the slate</a>
+              <a className="button button-primary" href="#proxy">Get the campaign proxy</a>
+              <a className="button button-secondary" href="#agenda">Read the full agenda</a>
             </div>
             <p className="independent-note">
               Prepared by shareholders of 79th Street East Owners, Inc. This is
@@ -179,7 +203,7 @@ export function SiteHome() {
             <div className="rule" />
             <p>East River House</p>
             <p>505 East 79th Street<br />New York, NY 10075</p>
-            <p className="confirm-note">Confirm the meeting time and voting instructions in the co-op&apos;s official notice.</p>
+            <p className="confirm-note">Proxy appointments are available. Text 213-207-6661 to schedule.</p>
           </aside>
         </section>
 
@@ -233,13 +257,14 @@ export function SiteHome() {
           <div className="section section-dark">
             <div className="section-intro agenda-intro">
               <p className="eyebrow">The shareholder agenda</p>
-              <h2>Six commitments that can be measured.</h2>
+              <h2>Eight priorities. A 100-day start.</h2>
               <p className="section-deck">
-                This agenda is deliberately practical. It improves how the co-op
-                listens, plans, communicates, and follows through without
-                discarding the experience or stability that already serve 505.
+                The expanded platform reflects the full survey: communication,
+                finances, facade and capital projects, management responsiveness,
+                property value, fair rules, useful amenities, open elections,
+                and everyday quality of life.
               </p>
-              <a className="text-link light-link" href="./downloads/505-shareholders-one-page-agenda.pdf">Download the one-page agenda <span aria-hidden="true">→</span></a>
+              <a className="text-link light-link" href="./downloads/505-shareholders-one-page-agenda.pdf">Download the full one-page platform <span aria-hidden="true">→</span></a>
             </div>
             <div className="agenda-grid">
               {agendaItems.map((item) => (
@@ -249,6 +274,48 @@ export function SiteHome() {
                 </article>
               ))}
             </div>
+            <div className="first-hundred">
+              <div><span>First 100 days</span><strong>Put the new standard in writing.</strong></div>
+              <ol>
+                {firstHundredDays.map((item, index) => (
+                  <li key={item}><span>0{index + 1}</span>{item}</li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section className="proxy-section" id="proxy">
+          <div className="proxy-shell">
+            <div className="proxy-copy">
+              <p className="eyebrow">A coordinated vote</p>
+              <h2>Keep all nine votes aligned.</h2>
+              <p className="proxy-deck">
+                If your goal is a coordinated change slate, mixing candidates
+                across competing slates fragments that support. Voting for the
+                full shareholder-supported slate - or appointing its proxy
+                holder - keeps all nine choices aligned.
+              </p>
+              <div className="proxy-actions">
+                <a className="button button-primary" href="./downloads/505-shareholder-slate-proxy.pdf">Download the campaign proxy</a>
+                <a className="button button-secondary" href="sms:+12132076661">Text for a proxy appointment</a>
+              </div>
+            </div>
+            <aside className="proxy-note">
+              <span className="proxy-stamp">Read before signing</span>
+              <h3>About the date on this form</h3>
+              <p>
+                The campaign proxy displays the original June 18, 2026 meeting
+                date. Its body appoints Jonathan Margareten for the 2026 Annual
+                Meeting and &quot;any and all adjournments thereof.&quot; The organizers
+                are prepared to use this form for September 23.
+              </p>
+              <p>
+                Text us before signing so we can walk through the form, arrange
+                collection, and help avoid an incomplete submission. The co-op&apos;s
+                official meeting notice and election procedures control.
+              </p>
+            </aside>
           </div>
         </section>
 
@@ -265,7 +332,7 @@ export function SiteHome() {
           </div>
           <div className="candidate-grid">
             {candidates.map((candidate) => (
-              <article className="candidate-card" key={candidate.name}>
+              <article className={candidate.name === "Jon Margareten" ? "candidate-card candidate-featured" : "candidate-card"} key={candidate.name}>
                 <div className="candidate-topline">
                   <span className={candidate.type === "New voice" ? "pill pill-new" : "pill"}>{candidate.type}</span>
                   <span className="candidate-initials" aria-hidden="true">{candidate.name.split(" ").slice(0,2).map((part) => part[0]).join("")}</span>
@@ -276,6 +343,19 @@ export function SiteHome() {
               </article>
             ))}
           </div>
+          <article className="jon-spotlight">
+            <div>
+              <p className="eyebrow">From Jon Margareten&apos;s candidate application</p>
+              <h3>Finance, law, operations, and hands-on construction.</h3>
+            </div>
+            <div className="credential-grid">
+              <span><strong>CPA + MBA</strong>Budgets, reserves, controls, and strategic planning</span>
+              <span><strong>Practicing attorney</strong>Contracts, governance, compliance, and risk</span>
+              <span><strong>Business owner</strong>Teams, vendors, operations, and accountability</span>
+              <span><strong>Construction experience</strong>Bids, scope, scheduling, renovations, and cost control</span>
+            </div>
+            <p className="application-note">Jon has committed 15 to 20 hours per week to Board service. The raw application is not posted because it contains personal information and a signature.</p>
+          </article>
           <a className="text-link" href="./downloads/505-shareholder-supported-slate-bios.pdf">Read the supplied candidate biographies <span aria-hidden="true">→</span></a>
         </section>
 
@@ -308,9 +388,9 @@ export function SiteHome() {
             <h2>Be ready for September 23.</h2>
           </div>
           <ol className="steps">
-            <li><span>1</span><div><h3>Review the slate and agenda</h3><p>Read the biographies, survey, straw poll, and six commitments before voting.</p></div></li>
-            <li><span>2</span><div><h3>Watch for current election materials</h3><p>The June proxy in the source folder predates the postponed meeting, so it is not posted here. Use only the current September materials and instructions when they are distributed.</p></div></li>
-            <li><span>3</span><div><h3>Attend or submit the current proxy</h3><p>Follow the official meeting notice and the instructions on the proxy you choose. If you have questions about the shareholder-supported slate, contact the organizers.</p></div></li>
+            <li><span>1</span><div><h3>Review the full platform and slate</h3><p>Read the expanded eight-priority agenda, biographies, survey, and straw poll before deciding.</p></div></li>
+            <li><span>2</span><div><h3>Download the campaign proxy</h3><p>The form displays the original June 18 date and appoints the slate proxy holder for the 2026 Annual Meeting and any adjournments. Text us before signing so we can answer questions and arrange collection.</p></div></li>
+            <li><span>3</span><div><h3>Keep the full slate aligned</h3><p>If coordinated change is your goal, support all nine shareholder-backed candidates rather than fragmenting the slate across competing individual choices.</p></div></li>
           </ol>
           <div className="election-cta">
             <div><span>Annual Meeting</span><strong>September 23, 2026</strong><p>Official time and meeting instructions to be confirmed in the co-op notice.</p></div>
@@ -327,7 +407,8 @@ export function SiteHome() {
             <details open><summary>Is this the official website of East River House?</summary><p>No. This is independent material prepared by shareholders to explain the shareholder-supported slate and agenda. Official meeting and voting instructions come from the co-op.</p></details>
             <details><summary>Is the slate proposing a complete board replacement?</summary><p>No. The nine-person slate includes five new candidates and four current directors selected for continuity through the May shareholder straw poll.</p></details>
             <details><summary>Where do the percentages come from?</summary><p>They come from an anonymous April 2026 Google Form with 55 self-selected responses from members of the shareholder WhatsApp group. The results are directional, not a randomized survey of every shareholder.</p></details>
-            <details><summary>Why is there no proxy download?</summary><p>The available proxy was created for the earlier June meeting. Because the annual meeting moved to September 23, posting that form could create confusion. This site will not present a stale proxy as current.</p></details>
+            <details><summary>Can I use the downloadable campaign proxy?</summary><p>The organizers are prepared to collect it for the September 23 Annual Meeting. The header shows the original June 18 date, while the body appoints Jonathan Margareten for the 2026 Annual Meeting and any adjournments. Text 213-207-6661 before signing so the organizers can walk through the form. Official co-op procedures control.</p></details>
+            <details><summary>Why vote the full slate instead of mixing candidates?</summary><p>This is a coordinated-slate recommendation. If your objective is a change majority with continuity, supporting all nine shareholder-backed candidates keeps that coalition aligned. Mixing candidates across competing slates fragments the coordinated support; every shareholder should still make an informed choice.</p></details>
             <details><summary>Does the agenda commit to a gym, playroom, or changed sublet rules?</summary><p>No. It commits to a transparent process: define the proposal, show the cost and operational effect, collect building-wide input, and decide without a predetermined outcome.</p></details>
           </div>
         </section>
@@ -346,6 +427,12 @@ export function SiteHome() {
           </div>
           <div className="building-facts" aria-label="Building facts"><span><strong>1963</strong>built</span><span><strong>209</strong>residences</span><span><strong>19</strong>stories</span></div>
         </section>
+      </div>
+
+      <div className="sticky-proxy" aria-label="Campaign proxy actions">
+        <span><strong>Ready to vote?</strong> Keep all nine aligned.</span>
+        <a href="./downloads/505-shareholder-slate-proxy.pdf">Get proxy</a>
+        <a href="sms:+12132076661">Text us</a>
       </div>
 
       <footer>
