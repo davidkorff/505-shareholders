@@ -15,9 +15,12 @@ test("GitHub Pages output contains the essential campaign content", async () => 
   assert.match(output, /September 23, 2026/);
   assert.match(output, /505 East 79th Street/);
   assert.match(output, /Eight priorities\. A 100-day start/);
-  assert.match(output, /Keep all nine votes aligned/);
+  assert.match(output, /Sign the proxy\. Build the votes for change/);
   assert.match(output, /505-shareholder-slate-proxy\.pdf/);
-  assert.match(output, /original June 18, 2026 meeting/);
+  assert.match(output, /The Chair was chosen by the current Board/);
+  assert.match(output, /All six incumbent applicants were recommended/);
   assert.match(output, /not the co-op/);
+  assert.doesNotMatch(output, /June 18/);
+  assert.doesNotMatch(output, /gym|playroom|outdoor space/i);
   assert.doesNotMatch(output, /WhatsApp Chat - 505 Shareholders/);
 });

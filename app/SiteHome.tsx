@@ -26,18 +26,18 @@ const agendaItems = [
   },
   {
     number: "06",
-    title: "Fair rules and fact-based amenities",
-    text: "Review renovation and sublet rules for consistency. Evaluate a gym, playroom, outdoor space, and other ideas through cost, safety, operations, and shareholder input.",
+    title: "Simple, consistent rules and approvals",
+    text: "Make renovation, alteration, sublet, and other approval processes clear, timely, and consistent. Publish plain-language requirements, owners, timelines, and escalation paths.",
   },
   {
     number: "07",
-    title: "Open governance and fair elections",
-    text: "Quarterly forums, Zoom access, regular surveys, useful committees, equal candidate access, independent election procedures, and discussion of staggered terms and reasonable term limits.",
+    title: "Simple, fair, independent elections",
+    text: "Use one clear calendar, neutral candidate information, equal ballot access, and independent administration. In 2026, the Board chose the committee chair and all six incumbent applicants were recommended.",
   },
   {
     number: "08",
-    title: "A better everyday shareholder experience",
-    text: "Consistent service, respectful treatment, proactive building updates, and decisions that balance long-time residents, growing families, flexibility, safety, and community.",
+    title: "Shareholder access and participation",
+    text: "Hold quarterly forums, provide Zoom access, make the Annual Meeting available virtually, use regular surveys, and create respectful channels for shareholder ideas and feedback.",
   },
 ];
 
@@ -45,7 +45,7 @@ const firstHundredDays = [
   "Publish the communication and response calendar",
   "Issue a facade and major-project status baseline",
   "Begin the reserve, capital, and vendor review",
-  "Schedule the first hybrid shareholder forum",
+  "Publish the election calendar and schedule a hybrid forum",
 ];
 
 const candidates = [
@@ -114,9 +114,9 @@ const documents = [
   },
   {
     title: "Shareholder-supported slate proxy",
-    meta: "1 page / campaign proxy",
+    meta: "Revised form / ready to sign",
     href: "./downloads/505-shareholder-slate-proxy.pdf",
-    text: "Appoints the slate proxy holder for the 2026 Annual Meeting and any adjournments. Read the date note before signing.",
+    text: "Appoints the slate proxy holder for the 2026 Annual Meeting and any adjournments. Sign it and text us to arrange collection.",
   },
   {
     title: "Shareholder survey results",
@@ -261,8 +261,8 @@ export function SiteHome() {
               <p className="section-deck">
                 The expanded platform reflects the full survey: communication,
                 finances, facade and capital projects, management responsiveness,
-                property value, fair rules, useful amenities, open elections,
-                and everyday quality of life.
+                property value, simpler rules, fair elections, and meaningful
+                shareholder participation.
               </p>
               <a className="text-link light-link" href="./downloads/505-shareholders-one-page-agenda.pdf">Download the full one-page platform <span aria-hidden="true">→</span></a>
             </div>
@@ -282,38 +282,55 @@ export function SiteHome() {
                 ))}
               </ol>
             </div>
+            <aside className="election-evidence">
+              <div>
+                <span>Why election reform is on the agenda</span>
+                <blockquote>&ldquo;The Chair was chosen by the current Board.&rdquo;</blockquote>
+                <small>August 6 Nominating Committee announcement</small>
+              </div>
+              <ul>
+                <li>All six incumbent applicants were recommended.</li>
+                <li>None of five shareholder-supported candidates were recommended.</li>
+                <li>Other qualified candidates could still request ballot access.</li>
+              </ul>
+              <p>
+                Our remedy is simpler: one clear calendar, neutral candidate
+                materials, equal access, transparent proxy instructions, and
+                independent administration.
+              </p>
+            </aside>
           </div>
         </section>
 
         <section className="proxy-section" id="proxy">
           <div className="proxy-shell">
             <div className="proxy-copy">
-              <p className="eyebrow">A coordinated vote</p>
-              <h2>Keep all nine votes aligned.</h2>
+              <p className="eyebrow">Turn concern into votes</p>
+              <h2>Sign the proxy. Build the votes for change.</h2>
               <p className="proxy-deck">
-                If your goal is a coordinated change slate, mixing candidates
-                across competing slates fragments that support. Voting for the
-                full shareholder-supported slate - or appointing its proxy
-                holder - keeps all nine choices aligned.
+                Every signed proxy helps build participation, quorum, and
+                organized support for the full shareholder-supported slate.
+                Download the revised form, sign it, and text us to arrange a
+                convenient collection appointment before September 23.
               </p>
               <div className="proxy-actions">
-                <a className="button button-primary" href="./downloads/505-shareholder-slate-proxy.pdf">Download the campaign proxy</a>
-                <a className="button button-secondary" href="sms:+12132076661">Text for a proxy appointment</a>
+                <a className="button button-primary" href="./downloads/505-shareholder-slate-proxy.pdf">Download the revised proxy</a>
+                <a className="button button-secondary" href="sms:+12132076661">Schedule a proxy appointment</a>
               </div>
             </div>
             <aside className="proxy-note">
-              <span className="proxy-stamp">Read before signing</span>
-              <h3>About the date on this form</h3>
+              <span className="proxy-stamp">Why sign now</span>
+              <h3>Change requires represented shares.</h3>
               <p>
-                The campaign proxy displays the original June 18, 2026 meeting
-                date. Its body appoints Jonathan Margareten for the 2026 Annual
-                Meeting and &quot;any and all adjournments thereof.&quot; The organizers
-                are prepared to use this form for September 23.
+                The election needs enough shares represented in person or by
+                proxy. Signing now helps the organizers track participation,
+                reduce last-minute uncertainty, and keep support for all nine
+                shareholder-backed candidates together.
               </p>
               <p>
-                Text us before signing so we can walk through the form, arrange
-                collection, and help avoid an incomplete submission. The co-op&apos;s
-                official meeting notice and election procedures control.
+                Complete the shareholder signature, date, apartment number, and
+                number of shares. If there are two owners of record, both should
+                sign. Text 213-207-6661 and we will arrange collection.
               </p>
             </aside>
           </div>
@@ -389,8 +406,8 @@ export function SiteHome() {
           </div>
           <ol className="steps">
             <li><span>1</span><div><h3>Review the full platform and slate</h3><p>Read the expanded eight-priority agenda, biographies, survey, and straw poll before deciding.</p></div></li>
-            <li><span>2</span><div><h3>Download the campaign proxy</h3><p>The form displays the original June 18 date and appoints the slate proxy holder for the 2026 Annual Meeting and any adjournments. Text us before signing so we can answer questions and arrange collection.</p></div></li>
-            <li><span>3</span><div><h3>Keep the full slate aligned</h3><p>If coordinated change is your goal, support all nine shareholder-backed candidates rather than fragmenting the slate across competing individual choices.</p></div></li>
+            <li><span>2</span><div><h3>Download and sign the revised proxy</h3><p>Complete the signature, date, apartment number, and number of shares. If two people own the apartment of record, both should sign.</p></div></li>
+            <li><span>3</span><div><h3>Text us to arrange collection</h3><p>Text 213-207-6661 for a convenient proxy appointment. Every signed proxy helps build participation and the votes needed for change.</p></div></li>
           </ol>
           <div className="election-cta">
             <div><span>Annual Meeting</span><strong>September 23, 2026</strong><p>Official time and meeting instructions to be confirmed in the co-op notice.</p></div>
@@ -407,9 +424,9 @@ export function SiteHome() {
             <details open><summary>Is this the official website of East River House?</summary><p>No. This is independent material prepared by shareholders to explain the shareholder-supported slate and agenda. Official meeting and voting instructions come from the co-op.</p></details>
             <details><summary>Is the slate proposing a complete board replacement?</summary><p>No. The nine-person slate includes five new candidates and four current directors selected for continuity through the May shareholder straw poll.</p></details>
             <details><summary>Where do the percentages come from?</summary><p>They come from an anonymous April 2026 Google Form with 55 self-selected responses from members of the shareholder WhatsApp group. The results are directional, not a randomized survey of every shareholder.</p></details>
-            <details><summary>Can I use the downloadable campaign proxy?</summary><p>The organizers are prepared to collect it for the September 23 Annual Meeting. The header shows the original June 18 date, while the body appoints Jonathan Margareten for the 2026 Annual Meeting and any adjournments. Text 213-207-6661 before signing so the organizers can walk through the form. Official co-op procedures control.</p></details>
+            <details><summary>How do I submit the proxy?</summary><p>Download the revised form, complete the shareholder signature, date, apartment number, and number of shares, and text 213-207-6661 to arrange collection. If there are two owners of record, both should sign.</p></details>
             <details><summary>Why vote the full slate instead of mixing candidates?</summary><p>This is a coordinated-slate recommendation. If your objective is a change majority with continuity, supporting all nine shareholder-backed candidates keeps that coalition aligned. Mixing candidates across competing slates fragments the coordinated support; every shareholder should still make an informed choice.</p></details>
-            <details><summary>Does the agenda commit to a gym, playroom, or changed sublet rules?</summary><p>No. It commits to a transparent process: define the proposal, show the cost and operational effect, collect building-wide input, and decide without a predetermined outcome.</p></details>
+            <details><summary>What does simpler, fairer election administration mean?</summary><p>One clear election calendar, neutral candidate information, equal ballot access, understandable proxy instructions, hybrid participation, and independent election administration. The goal is to let every qualified candidate compete on equal terms.</p></details>
           </div>
         </section>
 
@@ -430,7 +447,7 @@ export function SiteHome() {
       </div>
 
       <div className="sticky-proxy" aria-label="Campaign proxy actions">
-        <span><strong>Ready to vote?</strong> Keep all nine aligned.</span>
+        <span><strong>Ready for change?</strong> Sign the revised proxy.</span>
         <a href="./downloads/505-shareholder-slate-proxy.pdf">Get proxy</a>
         <a href="sms:+12132076661">Text us</a>
       </div>
