@@ -83,7 +83,7 @@ const candidates = [
     name: "Jon Margareten",
     type: "New voice",
     role: "Finance, law, construction, governance",
-    bio: "A licensed CPA, MBA, practicing attorney, business operator, and construction-business owner with experience in financial statements, budgeting, contracts, risk, contractor oversight, renovations, and cost control. Jon has committed 15 to 20 hours per week to Board service.",
+    bio: "An attorney, licensed CPA, and MBA with experience in business operations, financial oversight, construction, contracts, vendor accountability, and cost control.",
   },
   {
     name: "Alison Schlesinger",
@@ -113,8 +113,8 @@ const documents = [
     text: "The expanded survey-driven agenda, first 100 days, and coordinated-vote message.",
   },
   {
-    title: "Shareholder-supported slate proxy",
-    meta: "Revised form / ready to sign",
+    title: "Proxy form",
+    meta: "Ready to sign / 1 page",
     href: "./downloads/505-shareholder-slate-proxy.pdf",
     text: "Appoints the slate proxy holder for the 2026 Annual Meeting and any adjournments. Sign it and text us to arrange collection.",
   },
@@ -126,7 +126,7 @@ const documents = [
   },
   {
     title: "Straw poll results",
-    meta: "May 2026 / 39 valid apartments",
+    meta: "May 2026 / shareholder WhatsApp group",
     href: "./downloads/505-straw-poll-results.pdf",
     text: "How the shareholder-supported mix of new voices and continuity was selected.",
   },
@@ -149,7 +149,7 @@ function NavigationLinks() {
     <>
       <a href="#why">Why change</a>
       <a href="#agenda">Our agenda</a>
-      <a href="#proxy">Get a proxy</a>
+      <a href="#proxy">Proxy form</a>
       <a href="#slate">The slate</a>
       <a href="#materials">Materials</a>
       <a href="#election">How to vote</a>
@@ -186,7 +186,7 @@ export function SiteHome() {
               that protects quality of life and long-term value.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#proxy">Get the campaign proxy</a>
+              <a className="button button-primary" href="#proxy">Get the proxy form</a>
               <a className="button button-secondary" href="#agenda">Read the full agenda</a>
             </div>
             <p className="independent-note">
@@ -310,11 +310,11 @@ export function SiteHome() {
               <p className="proxy-deck">
                 Every signed proxy helps build participation, quorum, and
                 organized support for the full shareholder-supported slate.
-                Download the revised form, sign it, and text us to arrange a
+                Download the proxy form, sign it, and text us to arrange a
                 convenient collection appointment before September 23.
               </p>
               <div className="proxy-actions">
-                <a className="button button-primary" href="./downloads/505-shareholder-slate-proxy.pdf">Download the revised proxy</a>
+                <a className="button button-primary" href="./downloads/505-shareholder-slate-proxy.pdf">Download the proxy form</a>
                 <a className="button button-secondary" href="sms:+12132076661">Schedule a proxy appointment</a>
               </div>
             </div>
@@ -341,15 +341,25 @@ export function SiteHome() {
             <p className="eyebrow">The shareholder-supported slate</p>
             <h2>Five new voices. Four experienced directors. One shared standard.</h2>
             <p className="section-deck">
-              The May straw poll counted one vote per apartment and produced 39
-              valid apartment votes. The resulting slate pairs new financial,
-              operating, legal, technology, and construction experience with
-              continuity from four current directors.
+              The May straw poll was conducted within the shareholder WhatsApp
+              group, a community of more than 115 shareholders. The resulting
+              slate pairs new financial, operating, legal, technology, and
+              construction experience with continuity from four current directors.
             </p>
+          </div>
+          <div className="candidate-ribbon" aria-label="Candidate experience at a glance">
+            <div className="candidate-ribbon-track">
+              {[...candidates, ...candidates].map((candidate, index) => (
+                <span className="candidate-ribbon-item" aria-hidden={index >= candidates.length ? true : undefined} key={`${candidate.name}-${index}`}>
+                  <strong>{candidate.name}</strong>
+                  <small>{candidate.role}</small>
+                </span>
+              ))}
+            </div>
           </div>
           <div className="candidate-grid">
             {candidates.map((candidate) => (
-              <article className={candidate.name === "Jon Margareten" ? "candidate-card candidate-featured" : "candidate-card"} key={candidate.name}>
+              <article className="candidate-card" key={candidate.name}>
                 <div className="candidate-topline">
                   <span className={candidate.type === "New voice" ? "pill pill-new" : "pill"}>{candidate.type}</span>
                   <span className="candidate-initials" aria-hidden="true">{candidate.name.split(" ").slice(0,2).map((part) => part[0]).join("")}</span>
@@ -360,19 +370,6 @@ export function SiteHome() {
               </article>
             ))}
           </div>
-          <article className="jon-spotlight">
-            <div>
-              <p className="eyebrow">From Jon Margareten&apos;s candidate application</p>
-              <h3>Finance, law, operations, and hands-on construction.</h3>
-            </div>
-            <div className="credential-grid">
-              <span><strong>CPA + MBA</strong>Budgets, reserves, controls, and strategic planning</span>
-              <span><strong>Practicing attorney</strong>Contracts, governance, compliance, and risk</span>
-              <span><strong>Business owner</strong>Teams, vendors, operations, and accountability</span>
-              <span><strong>Construction experience</strong>Bids, scope, scheduling, renovations, and cost control</span>
-            </div>
-            <p className="application-note">Jon has committed 15 to 20 hours per week to Board service. The raw application is not posted because it contains personal information and a signature.</p>
-          </article>
           <a className="text-link" href="./downloads/505-shareholder-supported-slate-bios.pdf">Read the supplied candidate biographies <span aria-hidden="true">→</span></a>
         </section>
 
@@ -406,7 +403,7 @@ export function SiteHome() {
           </div>
           <ol className="steps">
             <li><span>1</span><div><h3>Review the full platform and slate</h3><p>Read the expanded eight-priority agenda, biographies, survey, and straw poll before deciding.</p></div></li>
-            <li><span>2</span><div><h3>Download and sign the revised proxy</h3><p>Complete the signature, date, apartment number, and number of shares. If two people own the apartment of record, both should sign.</p></div></li>
+            <li><span>2</span><div><h3>Download and sign the proxy form</h3><p>Complete the signature, date, apartment number, and number of shares. If two people own the apartment of record, both should sign.</p></div></li>
             <li><span>3</span><div><h3>Text us to arrange collection</h3><p>Text 213-207-6661 for a convenient proxy appointment. Every signed proxy helps build participation and the votes needed for change.</p></div></li>
           </ol>
           <div className="election-cta">
@@ -424,7 +421,7 @@ export function SiteHome() {
             <details open><summary>Is this the official website of East River House?</summary><p>No. This is independent material prepared by shareholders to explain the shareholder-supported slate and agenda. Official meeting and voting instructions come from the co-op.</p></details>
             <details><summary>Is the slate proposing a complete board replacement?</summary><p>No. The nine-person slate includes five new candidates and four current directors selected for continuity through the May shareholder straw poll.</p></details>
             <details><summary>Where do the percentages come from?</summary><p>They come from an anonymous April 2026 Google Form with 55 self-selected responses from members of the shareholder WhatsApp group. The results are directional, not a randomized survey of every shareholder.</p></details>
-            <details><summary>How do I submit the proxy?</summary><p>Download the revised form, complete the shareholder signature, date, apartment number, and number of shares, and text 213-207-6661 to arrange collection. If there are two owners of record, both should sign.</p></details>
+            <details><summary>How do I submit the proxy?</summary><p>Download the proxy form, complete the shareholder signature, date, apartment number, and number of shares, and text 213-207-6661 to arrange collection. If there are two owners of record, both should sign.</p></details>
             <details><summary>Why vote the full slate instead of mixing candidates?</summary><p>This is a coordinated-slate recommendation. If your objective is a change majority with continuity, supporting all nine shareholder-backed candidates keeps that coalition aligned. Mixing candidates across competing slates fragments the coordinated support; every shareholder should still make an informed choice.</p></details>
             <details><summary>What does simpler, fairer election administration mean?</summary><p>One clear election calendar, neutral candidate information, equal ballot access, understandable proxy instructions, hybrid participation, and independent election administration. The goal is to let every qualified candidate compete on equal terms.</p></details>
           </div>
@@ -446,9 +443,9 @@ export function SiteHome() {
         </section>
       </div>
 
-      <div className="sticky-proxy" aria-label="Campaign proxy actions">
-        <span><strong>Ready for change?</strong> Sign the revised proxy.</span>
-        <a href="./downloads/505-shareholder-slate-proxy.pdf">Get proxy</a>
+      <div className="sticky-proxy" aria-label="Proxy form actions">
+        <span><strong>Ready for change?</strong> Sign the proxy form.</span>
+        <a href="./downloads/505-shareholder-slate-proxy.pdf">Proxy form</a>
         <a href="sms:+12132076661">Text us</a>
       </div>
 
